@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Converter</title>
+	<style>
+		body{
+			background-color: black;
+			color:white;
+			display: inline-flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+		}
+		#head{
+			background-color:rgb(88,227,130);
+			font-size: 50px;
+			color:white;
+			text-align: center;
+			font-family: Algerian;
+			width: 100%
+		}
+		#d1,#d2,#d3{
+			display: inline-block;
+			font-size: 30px;
+		}
+		#d1{
+			margin-left: 200px;
+		}
+		#d2{
+			margin-left: 200px;
+		}
+
+		#d3{
+			margin-left: 200px;
+		}
+		p{
+			margin-bottom: 5px;
+		}
+		input{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<p id="head">Temperature Converter</p><br>
+<div id="d1"><p>Fahrenheit</p>
+<input type="number" name="num1" id="fa"   oninput="FahrenheitConverter(this.value)" onchange="FahrenheitConverter(this.value)">
+</div><br>
+<div id="d2"><p>Kelvin</p>
+<input type="number" name="num2	" id="kel" oninput="KelvinConverter(this.value)" onchange="KelvinConverter(this.value)">
+</div><br>
+<div id="d3"><p>Celsius</p>
+<input type="number" name="num3" id="cel"  oninput="CelsiusConverter(this.value)" onchange="CelsiusConverter(this.value)">
+</div>
+</body>
+<script>
+
+	function FahrenheitConverter(valueNum){
+		valueNum=parseFloat(valueNum);
+		document.getElementById('cel').value=(valueNum-32)/1.8;
+		document.getElementById('kel').value=((valueNum-32)/1.8)+273.15
+	}
+	function KelvinConverter(valueNum){
+		valueNum=parseFloat(valueNum);
+		document.getElementById('cel').value=valueNum-273.15;
+		document.getElementById('fa').value=((valueNum-273.15)*1.8)+32;
+	}
+	function CelsiusConverter(valueNum){
+		valueNum=parseFloat(valueNum);
+		document.getElementById('fa').value=(valueNum*1.8)+32;
+		document.getElementById('kel').value=valueNum+273.15;
+	}
+</script>
+</html>
