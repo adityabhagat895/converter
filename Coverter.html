@@ -9,14 +9,16 @@
 			display: inline-flex;
 			align-items: center;
 			flex-wrap: wrap;
+			font-family: serif;
+			margin: 0px;
 
 		}
 		#head{
 			background-color:rgb(88,227,130);
-			font-size:400%;
+			font-size:200%;
 			color:white;
 			text-align: center;
-			font-family: Algerian,serif;
+			font-family: Algerian;
 			width: 100%
 		}
 		#d1,#d2,#d3{
@@ -42,15 +44,15 @@
 	</style>
 </head>
 <body>
-<p id="head">Temperature Converter</p><br>
+<p id="head" style="margin-top: 0px;">Temperature Converter</p><br>
 <div id="d1"><p>Fahrenheit</p>
-<input type="number" name="num1" id="fa"   oninput="FahrenheitConverter(this.value)" onchange="FahrenheitConverter(this.value)">
+<input type="number" name="num1" id="fa"   oninput="FahrenheitConverter(this.value)" onchange="FahrenheitConverter(this.value)" placeholder="Fahrenheit">
 </div><br>
 <div id="d2"><p>Kelvin</p>
-<input type="number" name="num2	" id="kel" oninput="KelvinConverter(this.value)" onchange="KelvinConverter(this.value)">
+<input type="number" name="num2	" id="kel" oninput="KelvinConverter(this.value)" onchange="KelvinConverter(this.value)" placeholder="Kelvin">
 </div><br>
 <div id="d3"><p>Celsius</p>
-<input type="number" name="num3" id="cel"  oninput="CelsiusConverter(this.value)" onchange="CelsiusConverter(this.value)">
+<input type="number" name="num3" id="cel"  oninput="CelsiusConverter(this.value)" onchange="CelsiusConverter(this.value)" placeholder="Celsius">
 </div>
 </body>
 <script>
