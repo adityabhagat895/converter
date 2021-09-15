@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Converter</title>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-family: serif;
+            margin: 0px;
+
+        }
+        #head,#head2,#head3{
+            background-color:#CC7722;
+            font-size:500%;
+            color:white;
+            text-align: center;
+            font-family: Algerian;
+            width: 100%
+        }
+        #d1,#d2,#d3,#d4,#d5,#d6,#d7,#d8,#d9,#d10,#d11,#d12,#d13{
+            display: inline-block;
+            font-size: 500%;
+        }
+        #d1,#d4,#d7,#d10,#d13{
+            margin-left: 200px;
+        }
+        #d2,#d5,#d8,#d11{
+            margin-left: 200px;
+        }
+
+        #d3,#d6,#d9,#d12{
+            margin-left: 200px;
+        }
+        p{
+            margin-bottom: 5px;
+        }
+        input{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+<p id="head3" >Energy Converter</p><br>
+<div id="d7"><p>Joule</p>
+<input type="number" name="num1" id="j"   oninput="jConverter(this.value)" onchange="jConverter(this.value)" placeholder="Joule">
+</div><br>
+<div id="d8"><p>Calorie</p>
+<input type="number" name="num2 " id="cal" oninput="calConverter(this.value)" onchange="calConverter(this.value)" placeholder="Calorie">
+</div><br>
+<div id="d9"><p>Kilojoule</p>
+<input type="number" name="num3" id="kj"  oninput="kjConverter(this.value)" onchange="kjConverter(this.value)" placeholder="Kilojoule">
+</div>
+<div id="d10"><p>Kilocalorie</p>
+<input type="number" name="num3" id="kcal"  oninput="kcalConverter(this.value)" onchange="kcalConverter(this.value)" placeholder="Kilocalorie">
+</div>
+<div id="d11"><p>Electron volt</p>
+<input type="number" name="num3" id="eV"  oninput="eVConverter(this.value)" onchange="eVConverter(this.value)" placeholder="Electron volt">
+</div>
+
+</body>
+<script>
+    //Temperature Converter
+    function FahrenheitConverter(a){
+        a=parseFloat(a);
+        document.getElementById('cel').value=(a-32)/1.8;
+        document.getElementById('kel').value=((a-32)/1.8)+273.15
+    }
+    function KelvinConverter(a){
+        a=parseFloat(a);
+        document.getElementById('cel').value=a-273.15;
+        document.getElementById('fa').value=((a-273.15)*1.8)+32;
+    }
+    function CelsiusConverter(a){
+        a=parseFloat(a);
+        document.getElementById('fa').value=(a*1.8)+32;
+        document.getElementById('kel').value=a+273.15;
+    }
+    //Weight Converter
+    function KilogramConverter(b){
+        document.getElementById('g').value=b*1000;
+        document.getElementById('lb').value=b*2.2046;
+    }
+    function GramConverter(b){
+        document.getElementById('kg').value=b/1000;
+        document.getElementById('lb').value=b*0.0022046;
+    }
+    function PoundConverter(b){
+        document.getElementById('kg').value=b/2.2046;
+        document.getElementById('g').value=b/0.0022046;
+    }
+    //Length Converter
+    function cmConverter(c){
+        document.getElementById('m').value=c/100;
+        document.getElementById('km').value=c/100000;
+        document.getElementById('in').value=c*0.39370;
+        document.getElementById('f').value=c*0.032808;
+        document.getElementById('ya').value=c*0.010936;
+        document.getElementById('mi').value=c*0.0000062137;
+    }
+    function meterConverter(c){
+        document.getElementById('cm').value=c/0.01;
+        document.getElementById('km').value=c/1000;
+        document.getElementById('in').value=c*39.370;
+        document.getElementById('f').value=c*3.2808;
+        document.getElementById('ya').value=c*1.0936;
+        document.getElementById('mi').value=c*0.00062137;
+    }
+    function InchConverter(c){
+        document.getElementById('cm').value=c/0.39370;
+        document.getElementById('km').value=c/39370;
+        document.getElementById('m').value=c/39.370;
+        document.getElementById('f').value=c*0.083333;
+        document.getElementById('ya').value=c*0.027778;
+        document.getElementById('mi').value=c*0.000015783;
+    }
+    function FeetConverter(c){
+        document.getElementById('cm').value=c/0.032808;
+        document.getElementById('km').value=c/3280.8;
+        document.getElementById('in').value=c*12;
+        document.getElementById('m').value=c/3.2808;
+        document.getElementById('ya').value=c*0.33333;
+        document.getElementById('mi').value=c**0.00018939;
+    }
+    function yardConverter(c){
+        document.getElementById('cm').value=c/0.010936;
+        document.getElementById('km').value=c/1093.6;
+        document.getElementById('in').value=c*36;
+        document.getElementById('f').value=c*3;
+        document.getElementById('m').value=c/1.0936;
+        document.getElementById('mi').value=c*0.00056818;
+    }
+    function mileConverter(c){
+        document.getElementById('cm').value=c/0.0000062137;
+        document.getElementById('km').value=c/0.62137;
+        document.getElementById('in').value=c*63360;
+        document.getElementById('f').value=c*5280;
+        document.getElementById('ya').value=c*1760;
+        document.getElementById('m').value=c/0.00062137;
+    }
+    function kilometerConverter(c){
+        document.getElementById('cm').value=c*100000;
+        document.getElementById('mi').value=c*0.62137;
+        document.getElementById('in').value=c*39370;
+        document.getElementById('f').value=c*3280.8;
+        document.getElementById('ya').value=c*1093.6;
+        document.getElementById('m').value=c*1000;
+    }
+    function jConverter(d){
+        document.getElementById('kj').value=d/1000;
+        document.getElementById('cal').value=d/4.184;
+        document.getElementById('kcal').value=d/4184;
+        document.getElementById('eV').value=d*6.242e+18;
+        }
+        function calConverter(d){
+        document.getElementById('kj').value=d/239;
+        document.getElementById('j').value=d*4.184;
+        document.getElementById('kcal').value=d/1000;
+        document.getElementById('eV').value=d*2.611e+19;
+        }
+        function kcalConverter(d){
+        document.getElementById('kj').value=d*4.184;
+        document.getElementById('j').value=d*4184;
+        document.getElementById('cal').value=d*1000;
+        document.getElementById('eV').value=d*2.611e+22;
+        }
+        function kjConverter(d){
+        document.getElementById('kcal').value=d/4184;
+        document.getElementById('j').value=d*1000;
+        document.getElementById('cal').value=d*239;
+        document.getElementById('eV').value=d*6.242e+18;
+        }
+        function eVConverter(d){
+        document.getElementById('kcal').value=d/3.8293e-23;
+        document.getElementById('j').value=d/1.6022e-19;
+        document.getElementById('cal').value=d/3.82934991597e-20;
+        document.getElementById('kj').value=d*1.6022e-22;
+        }
+    </script>
+</html>
