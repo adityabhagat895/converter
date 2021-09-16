@@ -70,35 +70,7 @@
 </div>
 </body>
 <script>
-    //Temperature Converter
-	function FahrenheitConverter(a){
-		a=parseFloat(a);
-		document.getElementById('cel').value=(a-32)/1.8;
-		document.getElementById('kel').value=((a-32)/1.8)+273.15
-	}
-	function KelvinConverter(a){
-		a=parseFloat(a);
-		document.getElementById('cel').value=a-273.15;
-		document.getElementById('fa').value=((a-273.15)*1.8)+32;
-	}
-	function CelsiusConverter(a){
-		a=parseFloat(a);
-		document.getElementById('fa').value=(a*1.8)+32;
-		document.getElementById('kel').value=a+273.15;
-	}
-    //Weight Converter
-    function KilogramConverter(b){
-    	document.getElementById('g').value=b*1000;
-    	document.getElementById('lb').value=b*2.2046;
-    }
-    function GramConverter(b){
-    	document.getElementById('kg').value=b/1000;
-    	document.getElementById('lb').value=b*0.0022046;
-    }
-    function PoundConverter(b){
-    	document.getElementById('kg').value=b/2.2046;
-    	document.getElementById('g').value=b/0.0022046;
-    }
+   
     //Length Converter
     function cmConverter(c){
     	document.getElementById('m').value=c/100;
