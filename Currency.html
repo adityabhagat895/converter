@@ -27,7 +27,7 @@
 			font-size: 500%;
 		}
 		#d1,#d4,#d7,#d10,#d13{
-			margin-left: 10px;
+			margin-left: 200px;
 		}
 		#d2,#d5,#d8,#d11{
 			margin-left: 200px;
@@ -51,26 +51,26 @@
 
 
 <p id="head3" style="margin-top:0px;">Currency Converter</p><br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1200px-Flag_of_Australia_%28converted%29.svg.png" height="51px" width="90px"><div id="d7"><p>Australian Dollar</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1200px-Flag_of_Australia_%28converted%29.svg.png" height="51px" width="90px"><div id="d7" style="margin-left: 10px;"><p>Australian Dollar</p>
 <input type="number" name="num1" id="ad"   oninput="adConverter(this.value)" onchange="adConverter(this.value)" placeholder="Australian Dollar">
 </div><br>
 
-<div id="d8"><p style="margin-left: -200px;"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" height="51px" width="90px"> Canadian Dollar</p>
+<div id="d8"><p style="margin-left: -210px;"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" height="51px" width="90px"> Canadian Dollar</p>
 <input type="number" name="num2	" id="cd" oninput="cdConverter(this.value)" onchange="cdConverter(this.value)" placeholder="Canadian Dollar">
 </div><br>
-<div id="d9"><p>Chinese Yuan</p>
+<div id="d9"><p style="margin-left: -210px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/255px-Flag_of_the_People%27s_Republic_of_China.svg.png" height="51px" width="90px"> Chinese Yuan</p>
 <input type="number" name="num3" id="cy"  oninput="cyConverter(this.value)" onchange="cyConverter(this.value)" placeholder="Chinese Yuan">
 </div>
-<div id="d10"><p>Indian Rupee</p>
+<div id="d10"><p style="margin-left: -210px;"><img src="https://cdn11.bigcommerce.com/s-ey7tq/images/stencil/1280x1280/products/3303/18825/india-flag__43506.1575353601.jpg?c=2" height="51px" width="90px"> Indian Rupee</p>
 <input type="number" name="num3" id="ir"  oninput="irConverter(this.value)" onchange="irConverter(this.value)" placeholder="Indian Rupee">
 </div>
-<div id="d11"><p>British Pound</p>
+<div id="d11"><p style="margin-left: -210px;"><img src="data:image/png;base64,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" height="51px" width="90px"> British Pound</p>
 <input type="number" name="num3" id="bp"  oninput="bpConverter(this.value)" onchange="bpConverter(this.value)" placeholder="British Pound">
 </div>
-<div id="d12"><p>Japanese Yen</p>
+<div id="d12"><p style="margin-left: -210px;"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png" height="51px" width="90px"> Japanese Yen</p>
 <input type="number" name="num3" id="jy"  oninput="jyConverter(this.value)" onchange="jyConverter(this.value)" placeholder="Japanese Yen">
 </div>
-<div id="d13"><p>Singapore Dollar</p>
+<div id="d13"><p style="margin-left: -210px;"><img src="data:image/png;base64,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" height="51px" width="90px"> Singapore Dollar</p>
 <input type="number" name="num3" id="sd"  oninput="sdConverter(this.value)" onchange="sdConverter(this.value)" placeholder="Singapore Dollar">
 </div>
 </body>
