@@ -52,7 +52,7 @@
 
 
 <p id="head3" style="margin-top:0px;">Currency Converter</p><br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1200px-Flag_of_Australia_%28converted%29.svg.png" height="51px" width="90px"><div id="d7" style="margin-left: 10px;"><p>Australian Dollar</p>
+<div id="d7"><p style="margin-left: -210px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1200px-Flag_of_Australia_%28converted%29.svg.png" height="51px" width="90px"> Australian Dollar</p>
 <input type="number" name="num1" id="ad"   oninput="adConverter(this.value)" onchange="adConverter(this.value)" placeholder="Australian Dollar">
 </div><br>
 
@@ -76,63 +76,62 @@
 </div>
 </body>
 <script>
-   
-    //Length Converter
-    function cmConverter(c){
-    	document.getElementById('m').value=c/100;
-    	document.getElementById('km').value=c/100000;
-    	document.getElementById('in').value=c*0.39370;
-    	document.getElementById('f').value=c*0.032808;
-    	document.getElementById('ya').value=c*0.010936;
-    	document.getElementById('mi').value=c*0.0000062137;
+    function adConverter(d){
+    	document.getElementById('cd').value=d*0.92;
+    	document.getElementById('cy').value=d*4.71;
+    	document.getElementById('ir').value=d*53.57;
+    	document.getElementById('bp').value=d*0.53;
+    	document.getElementById('jy').value=d*80.10;
+    	document.getElementById('sd').value=d*0.98;
     }
-    function meterConverter(c){
-    	document.getElementById('cm').value=c/0.01;
-    	document.getElementById('km').value=c/1000;
-    	document.getElementById('in').value=c*39.370;
-    	document.getElementById('f').value=c*3.2808;
-    	document.getElementById('ya').value=c*1.0936;
-    	document.getElementById('mi').value=c*0.00062137;
+    function cdConverter(cd){
+    	document.getElementById('ad').value=d*1.08;
+    	document.getElementById('cy').value=d*5.09;
+    	document.getElementById('ir').value=d*57.91;
+    	document.getElementById('bp').value=d*0.57;
+    	document.getElementById('jy').value=d*86.62;
+    	document.getElementById('sd').value=d*1.06;
     }
-    function InchConverter(c){
-    	document.getElementById('cm').value=c/0.39370;
-    	document.getElementById('km').value=c/39370;
-    	document.getElementById('m').value=c/39.370;
-    	document.getElementById('f').value=c*0.083333;
-    	document.getElementById('ya').value=c*0.027778;
-    	document.getElementById('mi').value=c*0.000015783;
+    function cyConverter(cy){
+    	document.getElementById('ad').value=d*0.21;
+    	document.getElementById('cd').value=d*0.20;
+    	document.getElementById('ir').value=d*11.38;
+    	document.getElementById('bp').value=d*0.11;
+    	document.getElementById('jy').value=d*17.02;
+    	document.getElementById('sd').value=d*0.21;
     }
-    function FeetConverter(c){
-    	document.getElementById('cm').value=c/0.032808;
-    	document.getElementById('km').value=c/3280.8;
-    	document.getElementById('in').value=c*12;
-    	document.getElementById('m').value=c/3.2808;
-    	document.getElementById('ya').value=c*0.33333;
-    	document.getElementById('mi').value=c**0.00018939;
+    function irConverter(ir){
+    	document.getElementById('ad').value=d*0.019;
+    	document.getElementById('cd').value=d*0.017;
+    	document.getElementById('cy').value=d*0.088;
+    	document.getElementById('bp').value=d*0.0099;
+    	document.getElementById('jy').value=d*1.49;
+    	document.getElementById('sd').value=d*0.018;
     }
-    function yardConverter(c){
-    	document.getElementById('cm').value=c/0.010936;
-    	document.getElementById('km').value=c/1093.6;
-    	document.getElementById('in').value=c*36;
-    	document.getElementById('f').value=c*3;
-    	document.getElementById('m').value=c/1.0936;
-    	document.getElementById('mi').value=c*0.00056818;
+    function bpConverter(bp){
+    	document.getElementById('ad').value=d*1.89;
+    	document.getElementById('cd').value=d*1.75;
+    	document.getElementById('ir').value=d*101.22;
+    	document.getElementById('cy').value=d*8.89;
+    	document.getElementById('jy').value=d*151.32;
+    	document.getElementById('sd').value=d*1.85;
     }
-    function mileConverter(c){
-    	document.getElementById('cm').value=c/0.0000062137;
-    	document.getElementById('km').value=c/0.62137;
-    	document.getElementById('in').value=c*63360;
-    	document.getElementById('f').value=c*5280;
-    	document.getElementById('ya').value=c*1760;
-    	document.getElementById('m').value=c/0.00062137;
+    function jyConverter(jy){
+    	document.getElementById('ad').value=d*0.012;
+    	document.getElementById('cd').value=d*0.012;
+    	document.getElementById('ir').value=d*0.67;
+    	document.getElementById('bp').value=d*0.0066;
+    	document.getElementById('cy').value=d*0.059;
+    	document.getElementById('sd').value=d*0.012;
     }
-    function kilometerConverter(c){
-    	document.getElementById('cm').value=c*100000;
-    	document.getElementById('mi').value=c*0.62137;
-    	document.getElementById('in').value=c*39370;
-    	document.getElementById('f').value=c*3280.8;
-    	document.getElementById('ya').value=c*1093.6;
-    	document.getElementById('m').value=c*1000;
+    function sdConverter(sd){
+    	document.getElementById('ad').value=d*1.02;
+    	document.getElementById('cd').value=d*0.94;
+    	document.getElementById('ir').value=d*54.64;
+    	document.getElementById('bp').value=d*0.54;
+    	document.getElementById('jy').value=d*81.64;
+    	document.getElementById('cy').value=d*4.80;
     }
+    
 </script>
 </html>
