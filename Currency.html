@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Converter</title>
+	<style>
+		body{
+			background-color: black;
+			color:white;
+			display: inline-flex;
+			align-items: center;
+			flex-wrap: wrap;
+			font-family: serif;
+			margin: 0px;
+
+		}
+		#head,#head2,#head3{
+			background-color:#BF40BF;
+			font-size:500%;
+			color:white;
+			text-align: center;
+			font-family: Algerian;
+			width: 100%;
+			font-family:serif;
+		}
+		#d1,#d2,#d3,#d4,#d5,#d6,#d7,#d8,#d9,#d10,#d11,#d12,#d13{
+			display: inline-block;
+			font-size: 500%;
+		}
+		#d1,#d4,#d7,#d10,#d13{
+			margin-left: 200px;
+		}
+		#d2,#d5,#d8,#d11{
+			margin-left: 200px;
+		}
+
+		#d3,#d6,#d9,#d12{
+			margin-left: 200px;
+		}
+		p{
+			margin-bottom: 5px;
+		}
+		input{
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body>
+
+
+<p id="head3" style="margin-top:0px;">Currency Converter</p><br>
+<div id="d7"><p>Australian Dollar <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1200px-Flag_of_Australia_%28converted%29.svg.png" height="51px" width="90px"></p>
+<input type="number" name="num1" id="ad"   oninput="adConverter(this.value)" onchange="adConverter(this.value)" placeholder="Australian Dollar">
+</div><br>
+<div id="d8"><p>Canadian Dollar</p>
+<input type="number" name="num2	" id="cd" oninput="cdConverter(this.value)" onchange="cdConverter(this.value)" placeholder="Canadian Dollar">
+</div><br>
+<div id="d9"><p>Chinese Yuan</p>
+<input type="number" name="num3" id="cy"  oninput="cyConverter(this.value)" onchange="cyConverter(this.value)" placeholder="Chinese Yuan">
+</div>
+<div id="d10"><p>Indian Rupee</p>
+<input type="number" name="num3" id="ir"  oninput="irConverter(this.value)" onchange="irConverter(this.value)" placeholder="Indian Rupee">
+</div>
+<div id="d11"><p>British Pound</p>
+<input type="number" name="num3" id="bp"  oninput="bpConverter(this.value)" onchange="bpConverter(this.value)" placeholder="British Pound">
+</div>
+<div id="d12"><p>Japanese Yen</p>
+<input type="number" name="num3" id="jy"  oninput="jyConverter(this.value)" onchange="jyConverter(this.value)" placeholder="Japanese Yen">
+</div>
+<div id="d13"><p>Singapore Dollar</p>
+<input type="number" name="num3" id="sd"  oninput="sdConverter(this.value)" onchange="sdConverter(this.value)" placeholder="Singapore Dollar">
+</div>
+</body>
+<script>
+   
+    //Length Converter
+    function cmConverter(c){
+    	document.getElementById('m').value=c/100;
+    	document.getElementById('km').value=c/100000;
+    	document.getElementById('in').value=c*0.39370;
+    	document.getElementById('f').value=c*0.032808;
+    	document.getElementById('ya').value=c*0.010936;
+    	document.getElementById('mi').value=c*0.0000062137;
+    }
+    function meterConverter(c){
+    	document.getElementById('cm').value=c/0.01;
+    	document.getElementById('km').value=c/1000;
+    	document.getElementById('in').value=c*39.370;
+    	document.getElementById('f').value=c*3.2808;
+    	document.getElementById('ya').value=c*1.0936;
+    	document.getElementById('mi').value=c*0.00062137;
+    }
+    function InchConverter(c){
+    	document.getElementById('cm').value=c/0.39370;
+    	document.getElementById('km').value=c/39370;
+    	document.getElementById('m').value=c/39.370;
+    	document.getElementById('f').value=c*0.083333;
+    	document.getElementById('ya').value=c*0.027778;
+    	document.getElementById('mi').value=c*0.000015783;
+    }
+    function FeetConverter(c){
+    	document.getElementById('cm').value=c/0.032808;
+    	document.getElementById('km').value=c/3280.8;
+    	document.getElementById('in').value=c*12;
+    	document.getElementById('m').value=c/3.2808;
+    	document.getElementById('ya').value=c*0.33333;
+    	document.getElementById('mi').value=c**0.00018939;
+    }
+    function yardConverter(c){
+    	document.getElementById('cm').value=c/0.010936;
+    	document.getElementById('km').value=c/1093.6;
+    	document.getElementById('in').value=c*36;
+    	document.getElementById('f').value=c*3;
+    	document.getElementById('m').value=c/1.0936;
+    	document.getElementById('mi').value=c*0.00056818;
+    }
+    function mileConverter(c){
+    	document.getElementById('cm').value=c/0.0000062137;
+    	document.getElementById('km').value=c/0.62137;
+    	document.getElementById('in').value=c*63360;
+    	document.getElementById('f').value=c*5280;
+    	document.getElementById('ya').value=c*1760;
+    	document.getElementById('m').value=c/0.00062137;
+    }
+    function kilometerConverter(c){
+    	document.getElementById('cm').value=c*100000;
+    	document.getElementById('mi').value=c*0.62137;
+    	document.getElementById('in').value=c*39370;
+    	document.getElementById('f').value=c*3280.8;
+    	document.getElementById('ya').value=c*1093.6;
+    	document.getElementById('m').value=c*1000;
+    }
+</script>
+</html>
